@@ -1,0 +1,19 @@
+version: '2'
+services:
+  ubuntu1404lts:
+    image: threatresponse/ubuntu_lime
+    volumes: 
+      - ./modules:/opt/limemodules/
+  debianjessie:
+    image: threatresponse/debian_lime
+    volumes:
+      - ./modules:/opt/limemodules/
+  centoslatest_lime:
+    image: threatresponse/docker-centoslatest_lime
+    volumes:
+      - ./modules:/opt/limemodules/
+##### CentOS 6 Currently Broken due to an issue with DockerHub
+#  centos6_lime:
+#    image: threatresponse/centos6_lime
+#    volumes:
+#      - ./modules:/opt/limemodules/
